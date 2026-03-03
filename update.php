@@ -8,6 +8,8 @@ if (isset($_POST['update'])) {
 
     $stmt = $pdo->prepare("UPDATE users SET name = ?, email = ? WHERE user_id = ?");
     $stmt->execute([$name, $email, $users_id]);
+    header("Location: landing.php?msg=updated");
+    exit;
 
 }
 ?>

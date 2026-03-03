@@ -30,7 +30,8 @@ if (isset($_POST['add'])) {
     ");
     $stmt2->execute([$user_id, $product, $amount]);
 
-    header("Location: landing.php");
+    header("Location: landing.php?msg=added");
     exit;
+
 }
 ?>

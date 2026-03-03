@@ -7,7 +7,8 @@ if (isset($_GET['delete'])) {
     $stmt = $pdo->prepare("DELETE FROM orders WHERE orders_id = ?");
     $stmt->execute([$orders_id]);
 
-    header("Location: landing.php");
+    header("Location: landing.php?msg=deleted");
     exit;
+
 }
 ?>
